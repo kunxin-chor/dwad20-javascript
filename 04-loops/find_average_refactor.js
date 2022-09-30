@@ -1,8 +1,6 @@
 const prompt = require('prompt-sync')();
 
-let shallGoOn=true;
-while(shallGoOn) {
-   
+function findAverage() {
     let sum = 0;
     let count = 0;
     while(true) {
@@ -15,6 +13,16 @@ while(shallGoOn) {
     }
 
     console.log("Average =", sum/count);
+
+    //this function don't need to return anything
+    //because no other code makes use of the average
+}
+
+let shallGoOn=true;
+while(shallGoOn) {
+   
+    findAverage();
+
     let ans = prompt("Contuine with next set of numbers? ");
     if (ans == "n") {
         shallGoOn = false;
